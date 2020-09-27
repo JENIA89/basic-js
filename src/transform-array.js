@@ -6,28 +6,26 @@ module.exports = function transform(arr) {
   // if (!Array.isArray(arr)) {
   //   throw new Error("Error");
   // }
-
   // const newArr = [...arr];
-
-  // for (let i = 0; i <= newArr.length - 1; i++) {
+  // for (let i = 0; i < newArr.length - 1; i++) {
   //   if (newArr[i] === "--discard-next" && i != newArr.length - 1) {
-  //     newArr.splice(i, 2);
+  //     newArr[i] = newArr[i + 1];
   //   } else if (newArr[i] === "--discard-next" && i === newArr.length - 1) {
-  //     return arr;
+  //     newArr[i] = "xxx";
   //   } else if (newArr[i] === "--discard-prev" && i != 0) {
-  //     newArr.splice(i - 1, 2);
+  //     item[i - 1] = xxx;
   //   } else if (newArr[i] === "--discard-prev" && i === 0) {
-  //     return arr;
+  //     newArr[i] = "xxx";
   //   } else if (newArr[i] === "--double-next" && i != newArr.length - 1) {
   //     newArr[i] = newArr[i + 1];
   //   } else if (newArr[i] === "--double-next" && i === newArr.length - 1) {
-  //     return arr;
+  //     newArr[i] = "xxx";
   //   } else if (newArr[i] === "--double-prev" && i != 0) {
-  //     newArr[i] = newArr[i - 1];
+  //     item[i - 1] = xxx;
   //   } else if (newArr[i] === "--double-prev" && i === 0) {
-  //     return arr;
+  //     newArr[i] = "xxx";
   //   }
   // }
-
+  // newArr.filter((item) => item !== "xxx");
   // return newArr;
 };
